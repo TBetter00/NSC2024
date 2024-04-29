@@ -25,9 +25,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -40,4 +40,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: floor
+    uniqueID: 2244236033
+    locked: 0
+  - name: Decoration--
+    uniqueID: 179479749
+    locked: 0
+  - name: Decoration
+    uniqueID: 2252579299
+    locked: 0
+  - name: Decorationn++
+    uniqueID: 4277714595
+    locked: 0
+  - name: Walls
+    uniqueID: 2425651459
+    locked: 0
+  - name: Walls++
+    uniqueID: 4250941897
+    locked: 0
+  - name: Layer 3
+    uniqueID: 4189426099
     locked: 0
