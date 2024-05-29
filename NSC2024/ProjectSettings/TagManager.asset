@@ -59,6 +59,9 @@ TagManager:
   - name: Walls++
     uniqueID: 4250941897
     locked: 0
+  - name: Player
+    uniqueID: 2984022743
+    locked: 0
   - name: Decoration2.0
     uniqueID: 687617227
     locked: 0
