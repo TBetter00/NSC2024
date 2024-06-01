@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0bb932b6c623a61449e9d3810441a7cc
+guid: e0b9abd18ed3ef344a66c941dc1ed363
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: SwordF+B_Frame_0
+  - name: SwordF+Bt_Frame_0
     originalName: 
     pivot: {x: 0.40229884, y: -0.007874016}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 279
-      y: 1162
-      width: 261
-      height: 381
-    spriteID: 3df69dbdb4d532f4bbd70e581d8b5417
+      x: 198
+      y: 272
+      width: 87
+      height: 127
+    spriteID: 2e099b9edc9fbc1468afb903ad056fe2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -138,19 +138,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 192, y: 1159}
-  - name: SwordF+B_Frame_1
+    uvTransform: {x: 169, y: 271}
+  - name: SwordF+Bt_Frame_1
     originalName: 
     pivot: {x: 0.40909094, y: -0.015873017}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1536
-      width: 264
-      height: 378
-    spriteID: b8e1921dcb5227e4db94616051d55a74
+      x: 101
+      y: 137
+      width: 88
+      height: 126
+    spriteID: 887f0c0c077230c4cbf17a8d62dc78ae
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -158,8 +158,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -80, y: 1530}
-  - name: SwordF+B_Frame_2
+    uvTransform: {x: 73, y: 135}
+  - name: SwordF+Bt_Frame_2
     originalName: 
     pivot: {x: 0.41573033, y: -0.016}
     alignment: 9
@@ -168,9 +168,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 267
-      height: 375
-    spriteID: e2c0815dd5b442d45ac0e547acaae8ce
+      width: 89
+      height: 125
+    spriteID: be4f14ad72467d742b936c4613a6db96
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -178,19 +178,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -77, y: -2}
-  - name: SwordF+B_Frame_3
+    uvTransform: {x: -23, y: 2}
+  - name: SwordF+Bt_Frame_3
     originalName: 
     pivot: {x: 0.41573033, y: -0.032786883}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 551
-      y: 782
-      width: 267
-      height: 366
-    spriteID: fe59c6c49e42f3f4a8b2c5d04453df9e
+      x: 389
+      y: 4
+      width: 89
+      height: 122
+    spriteID: 4ea098d244b87b74a834e7d9140afcac
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -198,8 +198,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 470, y: 770}
-  - name: SwordF+B_Frame_4
+    uvTransform: {x: 362, y: 0}
+  - name: SwordF+Bt_Frame_4
     originalName: 
     pivot: {x: 0.41573033, y: -0.016}
     alignment: 9
@@ -207,10 +207,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 387
-      width: 267
-      height: 375
-    spriteID: 0033a98f33cbf4d429ea3811498b352d
+      y: 137
+      width: 89
+      height: 125
+    spriteID: c1c7b0d4d74086d40b4a0327eb3fa7bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -218,19 +218,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -77, y: 381}
-  - name: SwordF+B_Frame_5
+    uvTransform: {x: -23, y: 135}
+  - name: SwordF+Bt_Frame_5
     originalName: 
     pivot: {x: 0.40909094, y: -0.015873017}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 279
-      y: 4
-      width: 264
-      height: 378
-    spriteID: eff06d1d728d97045b5d6e27150a05be
+      x: 101
+      y: 271
+      width: 88
+      height: 126
+    spriteID: a3e8f3c77c5bf034494c163743c574f7
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -238,19 +238,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 195, y: -2}
-  - name: SwordF+B_Frame_6
+    uvTransform: {x: 73, y: 269}
+  - name: SwordF+Bt_Frame_6
     originalName: 
     pivot: {x: 0.40229884, y: -0.007874016}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 279
-      y: 1551
-      width: 261
-      height: 381
-    spriteID: 13d914e35ee66a34db75eed694af036a
+      x: 294
+      y: 4
+      width: 87
+      height: 127
+    spriteID: 5c8e5afd793d2434da92db668bea46f5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -258,19 +258,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 192, y: 1548}
-  - name: SwordF+B_Frame_7
+    uvTransform: {x: 265, y: 3}
+  - name: SwordF+Bt_Frame_7
     originalName: 
     pivot: {x: 0.59770113, y: -0.007874016}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 551
-      y: 4
-      width: 261
-      height: 381
-    spriteID: b79cb2513ab06bb4599a21df6b190ac8
+      x: 294
+      y: 139
+      width: 87
+      height: 127
+    spriteID: fa1c0970c53ca8946aa00b855e0cb371
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -278,19 +278,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 515, y: 1}
-  - name: SwordF+B_Frame_8
+    uvTransform: {x: 282, y: 138}
+  - name: SwordF+Bt_Frame_8
     originalName: 
     pivot: {x: 0.5909091, y: -0.015873017}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 279
-      y: 390
-      width: 264
-      height: 378
-    spriteID: b889880e0f02df74e96d2653ba3c58b2
+      x: 198
+      y: 4
+      width: 88
+      height: 126
+    spriteID: a79237a7f196ec64296549b9312d2d71
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -298,8 +298,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 243, y: 384}
-  - name: SwordF+B_Frame_9
+    uvTransform: {x: 186, y: 2}
+  - name: SwordF+Bt_Frame_9
     originalName: 
     pivot: {x: 0.58426964, y: -0.016}
     alignment: 9
@@ -307,10 +307,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 770
-      width: 267
-      height: 375
-    spriteID: a414cbdcf5d2dd64caa23f6b796a8086
+      y: 270
+      width: 89
+      height: 125
+    spriteID: 896ce3bd0d08b104cb2b0d3b0059269b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -318,19 +318,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -32, y: 764}
-  - name: SwordF+B_Frame_10
+    uvTransform: {x: -8, y: 268}
+  - name: SwordF+Bt_Frame_10
     originalName: 
     pivot: {x: 0.58426964, y: -0.032786883}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 551
-      y: 1156
-      width: 267
-      height: 366
-    spriteID: 19ba50d6fe3e2684aa4e959820b9c2b6
+      x: 389
+      y: 134
+      width: 89
+      height: 122
+    spriteID: ce09cfbfc48fdb848b071e8b5fc13bab
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -338,19 +338,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 515, y: 1144}
-  - name: SwordF+B_Frame_11
+    uvTransform: {x: 377, y: 130}
+  - name: SwordF+Bt_Frame_11
     originalName: 
     pivot: {x: 0.58426964, y: -0.016}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1153
-      width: 267
-      height: 375
-    spriteID: 898e56926bd59f048a767741cdb63d9e
+      x: 101
+      y: 4
+      width: 89
+      height: 125
+    spriteID: 90a593b6c6cecdb4ea59e8d4995bccc8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -358,19 +358,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -32, y: 1147}
-  - name: SwordF+B_Frame_12
+    uvTransform: {x: 89, y: 2}
+  - name: SwordF+Bt_Frame_12
     originalName: 
     pivot: {x: 0.5909091, y: -0.015873017}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 279
-      y: 776
-      width: 264
-      height: 378
-    spriteID: 56b348aa3eded40489e5b784601a390e
+      x: 198
+      y: 138
+      width: 88
+      height: 126
+    spriteID: 1ef298fed0c3d204eabd14b740c9ec51
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -378,19 +378,19 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 243, y: 770}
-  - name: SwordF+B_Frame_13
+    uvTransform: {x: 186, y: 136}
+  - name: SwordF+Bt_Frame_13
     originalName: 
     pivot: {x: 0.59770113, y: -0.007874016}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 551
-      y: 393
-      width: 261
-      height: 381
-    spriteID: 2f1f49b89a8fc1a4695f38911050c95e
+      x: 294
+      y: 274
+      width: 87
+      height: 127
+    spriteID: 289f33baf480f634b962176c0bb70406
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -398,131 +398,131 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 515, y: 390}
+    uvTransform: {x: 282, y: 273}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -516309950
-    name: SwordF+B
+    guid: 571641694
+    name: SwordF+Bt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SwordF+B_Frame_0
+    - name: SwordF+Bt_Frame_0
       frameIndex: 0
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 3df69dbdb4d532f4bbd70e581d8b5417
-    - name: SwordF+B_Frame_1
+        width: 128
+        height: 128
+      spriteId: 2e099b9edc9fbc1468afb903ad056fe2
+    - name: SwordF+Bt_Frame_1
       frameIndex: 1
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: b8e1921dcb5227e4db94616051d55a74
-    - name: SwordF+B_Frame_2
+        width: 128
+        height: 128
+      spriteId: 887f0c0c077230c4cbf17a8d62dc78ae
+    - name: SwordF+Bt_Frame_2
       frameIndex: 2
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: e2c0815dd5b442d45ac0e547acaae8ce
-    - name: SwordF+B_Frame_3
+        width: 128
+        height: 128
+      spriteId: be4f14ad72467d742b936c4613a6db96
+    - name: SwordF+Bt_Frame_3
       frameIndex: 3
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: fe59c6c49e42f3f4a8b2c5d04453df9e
-    - name: SwordF+B_Frame_4
+        width: 128
+        height: 128
+      spriteId: 4ea098d244b87b74a834e7d9140afcac
+    - name: SwordF+Bt_Frame_4
       frameIndex: 4
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 0033a98f33cbf4d429ea3811498b352d
-    - name: SwordF+B_Frame_5
+        width: 128
+        height: 128
+      spriteId: c1c7b0d4d74086d40b4a0327eb3fa7bc
+    - name: SwordF+Bt_Frame_5
       frameIndex: 5
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: eff06d1d728d97045b5d6e27150a05be
-    - name: SwordF+B_Frame_6
+        width: 128
+        height: 128
+      spriteId: a3e8f3c77c5bf034494c163743c574f7
+    - name: SwordF+Bt_Frame_6
       frameIndex: 6
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 13d914e35ee66a34db75eed694af036a
-    - name: SwordF+B_Frame_7
+        width: 128
+        height: 128
+      spriteId: 5c8e5afd793d2434da92db668bea46f5
+    - name: SwordF+Bt_Frame_7
       frameIndex: 7
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: b79cb2513ab06bb4599a21df6b190ac8
-    - name: SwordF+B_Frame_8
+        width: 128
+        height: 128
+      spriteId: fa1c0970c53ca8946aa00b855e0cb371
+    - name: SwordF+Bt_Frame_8
       frameIndex: 8
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: b889880e0f02df74e96d2653ba3c58b2
-    - name: SwordF+B_Frame_9
+        width: 128
+        height: 128
+      spriteId: a79237a7f196ec64296549b9312d2d71
+    - name: SwordF+Bt_Frame_9
       frameIndex: 9
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: a414cbdcf5d2dd64caa23f6b796a8086
-    - name: SwordF+B_Frame_10
+        width: 128
+        height: 128
+      spriteId: 896ce3bd0d08b104cb2b0d3b0059269b
+    - name: SwordF+Bt_Frame_10
       frameIndex: 10
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 19ba50d6fe3e2684aa4e959820b9c2b6
-    - name: SwordF+B_Frame_11
+        width: 128
+        height: 128
+      spriteId: ce09cfbfc48fdb848b071e8b5fc13bab
+    - name: SwordF+Bt_Frame_11
       frameIndex: 11
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 898e56926bd59f048a767741cdb63d9e
-    - name: SwordF+B_Frame_12
+        width: 128
+        height: 128
+      spriteId: 90a593b6c6cecdb4ea59e8d4995bccc8
+    - name: SwordF+Bt_Frame_12
       frameIndex: 12
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 56b348aa3eded40489e5b784601a390e
-    - name: SwordF+B_Frame_13
+        width: 128
+        height: 128
+      spriteId: 1ef298fed0c3d204eabd14b740c9ec51
+    - name: SwordF+Bt_Frame_13
       frameIndex: 13
       cellRect:
         x: 0
         y: 0
-        width: 384
-        height: 384
-      spriteId: 2f1f49b89a8fc1a4695f38911050c95e
+        width: 128
+        height: 128
+      spriteId: 289f33baf480f634b962176c0bb70406
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 384, y: 384}
+  canvasSize: {x: 128, y: 128}
