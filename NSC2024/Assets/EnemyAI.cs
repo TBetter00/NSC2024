@@ -27,12 +27,27 @@ public class EnemyAI : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    // Patrol parameters
+    public float moveSpeed = 3f;
+    public float patrolRadius = 5f;
+    public float waitTime = 1f;
+
+    private Vector2 startPos;
+    private Vector2 targetPos;
+    private float waitTimer;
+    private bool isWaiting;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         // Ensure the agent updates correctly for 2D
         agent.updateRotation = false;  // Disable automatic rotation updates
         agent.updateUpAxis = false;    // Disable automatic up axis updates
+        // Initialize patrol parameters
+        startPos = transform.position;
+        SetRandomTargetPosition();
+        waitTimer = waitTime;
+        isWaiting = false;
     }
 
     void Update()
@@ -48,64 +63,45 @@ public class EnemyAI : MonoBehaviour
         {
             playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
             playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, whatIsPlayer);
-            
-            // Uncomment these lines to enable patrolling and attacking behavior
-            if (!playerInSightRange && !playerInAttackRange) Patrolling(); Debug.Log("Patrol");
-            if (playerInSightRange && !playerInAttackRange) ChasePlayer(nearestPlayer); Debug.Log("Chase");
-            if (playerInAttackRange && playerInSightRange) Attacking(nearestPlayer); Debug.Log("Attack");
 
-            // For testing purposes, we are always in patrolling state
+            if (!playerInSightRange && !playerInAttackRange)
+                Patrolling();
+            else if (playerInSightRange && !playerInAttackRange)
+                ChasePlayer(nearestPlayer);/*
+            else if (playerInAttackRange && playerInSightRange)
+                Attacking(nearestPlayer);*/
         }
     }
 
     void Patrolling()
     {
-        if (!walkPointSet) SearchWalkPoint();
-
-        if (walkPointSet)
+        StopChasing();
+        if (isWaiting)
         {
-            agent.SetDestination(walkPoint);
-            Debug.Log("Patrolling to: " + walkPoint);
+            waitTimer -= Time.deltaTime;
+            if (waitTimer <= 0f)
+            {
+                SetRandomTargetPosition();
+                isWaiting = false;
+                waitTimer = waitTime;
+            }
         }
         else
         {
-            Debug.Log("Searching for walk point.");
-        }
+            transform.position = Vector2.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;
-
-        // Walkpoint reached
-        if (distanceToWalkPoint.magnitude < 1f)
-        {
-            walkPointSet = false;
-            Debug.Log("Reached walk point.");
+            if ((Vector2)transform.position == targetPos)
+            {
+                isWaiting = true;
+            }
         }
     }
 
-    private void SearchWalkPoint()
+    void SetRandomTargetPosition()
     {
-        float randomX = Random.Range(-walkPointRange, walkPointRange);
-        float randomY = Random.Range(-walkPointRange, walkPointRange);
-
-        walkPoint = new Vector3(transform.position.x + randomX, transform.position.y + randomY, 0);
-
-        // Adjust the length of the raycast
-        float raycastLength = 5f;
-
-        // Draw the raycast in the scene for debugging purposes
-        Debug.DrawRay(walkPoint, Vector2.down * raycastLength, Color.red, 2f);
-
-        // Perform the raycast and check if it hits the ground layer
-        RaycastHit2D hit = Physics2D.Raycast(walkPoint, Vector2.down, raycastLength, whatIsGround);
-        if (hit.collider != null)
-        {
-            walkPointSet = true;
-            Debug.Log("Found new walk point: " + walkPoint);
-        }
-        else
-        {
-            Debug.Log("Failed to find a valid walk point at position: " + walkPoint + " with direction: " + Vector2.down);
-        }
+        float randomX = Random.Range(-patrolRadius, patrolRadius);
+        float randomY = Random.Range(-patrolRadius, patrolRadius);
+        targetPos = new Vector2(startPos.x + randomX, startPos.y + randomY);
     }
 
     void ChasePlayer(Transform targetPlayer)
@@ -129,6 +125,11 @@ public class EnemyAI : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+    }
+    public void StopChasing()
+    {
+        agent.isStopped = true; // Stops the agent from moving
+        agent.ResetPath(); // Clears the current path
     }
 
     private void ResetAttack()
