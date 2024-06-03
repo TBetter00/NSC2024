@@ -7,11 +7,10 @@ public class EnemyAI : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public Transform player;
+    public GameObject player1;
+    public GameObject player2;
 
     public LayerMask whatIsGround, whatIsPlayer;
-
-    public GameObject myPlayer;
 
     public GameObject bullet;
 
@@ -43,12 +42,20 @@ public class EnemyAI : MonoBehaviour
         position.z = 0;
         agent.transform.position = position;
 
-        playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, whatIsPlayer);
+        Transform nearestPlayer = GetNearestPlayer();
 
-        if (!playerInSightRange && !playerInAttackRange) Patrolling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) Attacking();
+        if (nearestPlayer != null)
+        {
+            playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, whatIsPlayer);
+            
+            // Uncomment these lines to enable patrolling and attacking behavior
+            if (!playerInSightRange && !playerInAttackRange) Patrolling(); Debug.Log("Patrol");
+            if (playerInSightRange && !playerInAttackRange) ChasePlayer(nearestPlayer); Debug.Log("Chase");
+            if (playerInAttackRange && playerInSightRange) Attacking(nearestPlayer); Debug.Log("Attack");
+
+            // For testing purposes, we are always in patrolling state
+        }
     }
 
     void Patrolling()
@@ -58,13 +65,20 @@ public class EnemyAI : MonoBehaviour
         if (walkPointSet)
         {
             agent.SetDestination(walkPoint);
+            Debug.Log("Patrolling to: " + walkPoint);
+        }
+        else
+        {
+            Debug.Log("Searching for walk point.");
         }
 
         Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
+        // Walkpoint reached
         if (distanceToWalkPoint.magnitude < 1f)
         {
             walkPointSet = false;
+            Debug.Log("Reached walk point.");
         }
     }
 
@@ -75,22 +89,35 @@ public class EnemyAI : MonoBehaviour
 
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y + randomY, 0);
 
-        if (Physics2D.Raycast(walkPoint, Vector2.down, 2f, whatIsGround))
+        // Adjust the length of the raycast
+        float raycastLength = 5f;
+
+        // Draw the raycast in the scene for debugging purposes
+        Debug.DrawRay(walkPoint, Vector2.down * raycastLength, Color.red, 2f);
+
+        // Perform the raycast and check if it hits the ground layer
+        RaycastHit2D hit = Physics2D.Raycast(walkPoint, Vector2.down, raycastLength, whatIsGround);
+        if (hit.collider != null)
         {
             walkPointSet = true;
+            Debug.Log("Found new walk point: " + walkPoint);
+        }
+        else
+        {
+            Debug.Log("Failed to find a valid walk point at position: " + walkPoint + " with direction: " + Vector2.down);
         }
     }
 
-    void ChasePlayer()
+    void ChasePlayer(Transform targetPlayer)
     {
-        agent.SetDestination(myPlayer.transform.position);
+        agent.SetDestination(targetPlayer.position);
     }
 
-    void Attacking()
+    void Attacking(Transform targetPlayer)
     {
         agent.SetDestination(transform.position);
 
-        Vector3 direction = (myPlayer.transform.position - transform.position).normalized;
+        Vector3 direction = (targetPlayer.position - transform.position).normalized;
         transform.up = direction;
 
         if (!alreadyAttacked)
@@ -107,6 +134,14 @@ public class EnemyAI : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+
+    private Transform GetNearestPlayer()
+    {
+        float distanceToPlayer1 = Vector3.Distance(transform.position, player1.transform.position);
+        float distanceToPlayer2 = Vector3.Distance(transform.position, player2.transform.position);
+
+        return distanceToPlayer1 < distanceToPlayer2 ? player1.transform : player2.transform;
     }
 
     private void OnDrawGizmosSelected()
